@@ -13,7 +13,9 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "OWASP Chapter Manit",
-  icon:"/logo_owasp.png",
+  icons: {
+    icon: "/logo_owasp.png",
+  },
   description: "WebPage for owasp-chapter-manit.",
 };
 

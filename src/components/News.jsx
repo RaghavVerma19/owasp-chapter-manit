@@ -10,11 +10,7 @@ function Section({ children }) {
   return (
     <section ref={ref}>
       <div
-        style={{
-          transform: isInView ? "translateY(0)" : "translateY(100px)",
-          opacity: isInView ? 1 : 0,
-          transition: "all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1) 0.1s",
-        }}
+        
       >
         {children}
       </div>
@@ -53,7 +49,6 @@ const News = () => {
           requestOptions
         );
         const data = await response.json();
-        console.log(data);
         const articles = Array.isArray(data.articles)
   ? data.articles?.map(({ title, description, source, url, content, publishedAt, image }) => ({ title, description, source, url, content, publishedAt, image }))
   : [];

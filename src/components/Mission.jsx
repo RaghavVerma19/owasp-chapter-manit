@@ -6,50 +6,40 @@ const Mission = () => {
   return (
     <div className="w-full ">
       <div className="container-custom gap-10 ">
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+        <div 
+        
           className="glass-card p-8 md:p-12 rounded-2xl"
         >
           
           {/* Vision Card */}
           <div className="text-center mb-16">
-            <motion.h3 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
+            <h3 
+              
               className="text-2xl md:text-3xl font-bold text-white mb-6  flex flex-col items-center "
             >
               Our Vision
-            </motion.h3>
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
+            </h3>
+            <div 
+              
               className="relative"
             >
               <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300 mb-6">
                 No more insecure software.
               </p>
-            </motion.div>
+            </div>
           </div>
           
           {/* Mission Card */}
           <div className="text-center">
-            <motion.h3 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.5 }}
+            <h3 
+             
               className="text-2xl md:text-3xl font-bold text-white mb-6"
             >
               Our Mission
-            </motion.h3>
+            </h3>
             
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
+            <div 
+              
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8"
             >
               {/* Mission Card 1 */}
@@ -85,19 +75,17 @@ const Mission = () => {
                 <h4 className="text-xl font-semibold text-white mb-3">Security Advocacy</h4>
                 <p className="text-white/80">Promoting security best practices and raising awareness about cybersecurity challenges in modern applications.</p>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.p 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2, duration: 0.6 }}
+            <p 
+             
               className="relative top-0 w-fit h-auto py-4 justify-center flex bg-gradient-to-r items-center from-blue-500 via-teal-500 to-pink-500 bg-clip-text text-2xl font-extrabold text-transparent text-center select-auto"
             >
               OWASP Chapter MANIT is your gateway to the exciting world of cybersecurity! At NIT Bhopal, we explore cutting-edge topics like network security, ethical hacking, and secure development.
-            </motion.p>
+            </p>
            
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

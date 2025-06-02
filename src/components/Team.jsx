@@ -14,13 +14,11 @@ function Section({ children }) {
 
   return (
     <section ref={ref} className="w-60">
-      <motion.div
-        initial={{ y: 50, opacity: 0 }}
-        animate={isInView ? { y: 0, opacity: 1 } : {}}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+      <div
+       
       >
         {children}
-      </motion.div>
+      </div>
     </section>
   );
 }
@@ -57,8 +55,8 @@ const Team = () => {
       <div className="flex flex-wrap gap-7 justify-center">
         {displayed.map((member, idx) => (
           <Section key={idx}>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
+            <div
+             
               className="relative bg-black bg-opacity-10 backdrop-blur-lg rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 w-60 h-80"
             >
               <div className="relative w-full h-40">
@@ -96,7 +94,7 @@ const Team = () => {
                   <FaLinkedinIn className="text-xl text-sky-600" />
                 </a>
               </div>
-            </motion.div>
+            </div>
           </Section>
         ))}
       </div>

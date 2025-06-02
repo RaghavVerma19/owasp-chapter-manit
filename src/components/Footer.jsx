@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import owaspLogo from "../../public/logo_owasp.png"
 import { BsInstagram } from "react-icons/bs";
 import { FaLinkedinIn, FaMeetup, FaDiscord, FaGithub } from "react-icons/fa6";
 import { RiTwitterXLine } from "react-icons/ri";
@@ -25,7 +27,9 @@ const Footer = () => {
           {/* Column 1: About */}
           <div className="flex flex-col items-center md:items-start">
             <div className="flex items-center mb-5">
-              <div className="footer-logo w-12 h-12 rounded-full bg-white p-1 shadow-md"></div>
+              <div className="footer-logo w-12 h-12 rounded-full bg-white p-1 shadow-md flex items-center justify-center">
+                <Image src={owaspLogo} width={50} height={50} alt="Owasp-logo"></Image>
+              </div>
               <div className="ml-3.5">
                 <h3 className="font-bold text-xl tracking-wide">OWASP</h3>
                 <p className="text-sm text-gray-200">Chapter MANIT</p>

@@ -63,10 +63,8 @@ const Team_Home = () => {
     <div className="home-page relative">
       <Vortex className="inset-0 z-0" children={<section className="hero-section w-full min-h-screen relative flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
+          <div
+           
             className="hero-content"
           >
             
@@ -81,16 +79,13 @@ const Team_Home = () => {
               <span className="text-green-500 mr-2 text-xl">$</span>
               <span className="text-green-500 text-xl font-mono h-8">{text}<span className="typing-cursor"></span></span>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section> } />
       
     {/* Events Section */}
-    <motion.section
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
-        variants={fadeInUp}
+    <section
+       
         className="section bg-gradient-blue"
         id="past-events"
       >
@@ -108,7 +103,7 @@ const Team_Home = () => {
           </Link>
           </div>
         </div>
-      </motion.section>
+      </section>
     
 
       {/* Projects Section */}
@@ -126,11 +121,8 @@ const Team_Home = () => {
         </div> */}
       {/* </motion.section> */}
           {/* Mission Section */}
-      <motion.section 
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
-        variants={fadeInUp}
+      <section 
+        
         className="section bg-gradient-dark py-20"
         id="mission"
       >
@@ -138,15 +130,12 @@ const Team_Home = () => {
           {/* <h2 className="section-title text-white mb-12">Our Mission</h2> */}
           <Mission />
         </div>
-      </motion.section>
+      </section>
 
 
       {/* News Section */}
-      <motion.section 
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
-        variants={fadeInUp}
+      <section 
+        
         className="section bg-gradient-dark py-20 rounded-2xl"
         id="news"
       >
@@ -154,14 +143,10 @@ const Team_Home = () => {
           <h2 className="section-title text-white mb-12">Latest News</h2>
           <News />
         </div>
-      </motion.section>
+      </section>
 
       {/* Team Section */}
-      <motion.section 
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
-        variants={fadeInUp}
+      <section
         className="section bg-black "
         id="team"
       >
@@ -169,14 +154,11 @@ const Team_Home = () => {
           {/* <h2 className="section-title text-white mb-12">About Us</h2> */}
           <Team />
         </div>
-      </motion.section>
+      </section>
 
       {/* FAQs Section */}
-      <motion.section 
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
-        variants={fadeInUp}
+      <section 
+       
         className="section bg-gradient-dark py-20 rounded-2xl"
         id="faqs"
       >
@@ -184,7 +166,7 @@ const Team_Home = () => {
           <h2 className="section-title text-white mb-12">Frequently Asked Questions</h2>
           <Faqs />
         </div>
-      </motion.section>
+      </section>
     </div>
   );
 };

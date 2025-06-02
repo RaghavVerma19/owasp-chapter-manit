@@ -24,23 +24,7 @@ const Faqs = () => {
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.4 }
-    }
-  };
 
-  const contentVariants = {
-    hidden: { opacity: 0, height: 0 },
-    visible: {
-      opacity: 1,
-      height: "auto",
-      transition: { duration: 0.3 }
-    }
-  };
 
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-900 to-black min-h-screen rounded-2xl">
@@ -70,16 +54,15 @@ const Faqs = () => {
             <div className="p-6 lg:p-8">
               <h2 className="text-2xl font-bold text-white mb-8 lg:hidden">Frequently Asked Questions</h2>
               
-              <motion.div
+              <div
                 className="space-y-4 no-scrollbar"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
               >
                 {QueryData.map((faq, index) => (
-                  <motion.div
-                    key={index}
-                    variants={itemVariants}
+                  <div
+                  key={index}
                     className="border-b border-white/20 pb-2"
                   >
                     <button
@@ -87,31 +70,27 @@ const Faqs = () => {
                       className="w-full text-left py-4 flex justify-between items-center focus:outline-none"
                     >
                       <span className="text-white font-medium">{faq.query}</span>
-                      <motion.div
-                        animate={{ rotate: activeIndex === index ? 180 : 0 }}
-                        transition={{ duration: 0.3 }}
+                      <div
+                        
                         className="text-white"
                       >
                         <GoChevronDown />
-                      </motion.div>
+                      </div>
                     </button>
                     
                     <AnimatePresence>
                       {activeIndex === index && (
-                        <motion.div
-                          variants={contentVariants}
-                          initial="hidden"
-                          animate="visible"
-                          exit="hidden"
+                        <div
+                          
                           className="overflow-hidden"
                         >
                           <p className="text-white/80 pb-4 text-sm">{faq.answer}</p>
-                        </motion.div>
+                        </div>
                       )}
                     </AnimatePresence>
-                  </motion.div>
+                  </div>
                 ))}
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>
