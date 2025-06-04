@@ -4,6 +4,7 @@ import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 import { GoChevronDown } from "react-icons/go";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { throttle } from 'lodash';
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);

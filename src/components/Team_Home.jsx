@@ -11,66 +11,33 @@ import { Vortex } from './ui/vortex.jsx';
 
 const Team_Home = () => {
   const [text, setText] = useState('');
-  const [textIndex, setTextIndex] = useState(0);
-  const [charIndex, setCharIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [typingSpeed, setTypingSpeed] = useState(100);
-  
-  const texts = ['Hacking', 'Cyber Security', 'Ethical Hacking', 'Networking', 'Development'];
+
 
   // Modern typing effect with smoother transitions
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      const currentText = texts[textIndex];
-      
-      if (!isDeleting) {
-        setText(currentText.substring(0, charIndex + 1));
-        setCharIndex(charIndex + 1);
-        
-        // If we've typed the full word, start deleting after a pause
-        if (charIndex >= currentText.length) {
-          setIsDeleting(true);
-          setTypingSpeed(150); // Pause before deleting
-        }
-      } else {
-        setText(currentText.substring(0, charIndex - 1));
-        setCharIndex(charIndex - 1);
-        
-        // If we've deleted the word, move to the next word
-        if (charIndex <= 1) {
-          setIsDeleting(false);
-          setTextIndex((textIndex + 1) % texts.length);
-          setTypingSpeed(100); // Normal typing speed
-        }
-      }
-    }, typingSpeed);
-    
-    return () => clearTimeout(timer);
-  }, [charIndex, isDeleting, textIndex, typingSpeed, texts]);
+  
+
 
   return (
-    <div className="home-page relative">
-      <Vortex className="inset-0 z-0" children={<section className="hero-section w-full min-h-screen relative flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div className="home-page relative bg-black text-white overflow-hidden">
+      {/* <Vortex className="inset-0 z-0" children={<section className="hero-section w-full min-h-screen relative flex items-center justify-center px-4 sm:px-6 lg:px-8"> */}
         <div className="relative z-10 text-center">
           <div
            
             className="hero-content"
           >
             
-            <div className="h-20"></div>
+            <div className="h-90"></div>
             <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold text-white mb-2">
               OWASP
             </h1>
             <p className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-8">
               Chapter MANIT
             </p>
-            <div className="inline-flex items-center glass-card px-6 py-3 mt-4">
-              <span className="text-green-500 mr-2 text-xl">$</span>
-              <span className="text-green-500 text-xl font-mono h-8">{text}<span className="typing-cursor"></span></span>
-            </div>
+            <div className="h-100"></div>
+            
           </div>
         </div>
-      </section> } />
+      {/* </section> } /> */}
       
     {/* Events Section */}
     <section
