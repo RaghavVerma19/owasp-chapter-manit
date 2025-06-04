@@ -6,7 +6,6 @@ import Faqs from './Faqs';
 import Events from './Events';
 import Team from './Team';
 import Mission from './Mission';
-import { motion } from "framer-motion"
 import Link from 'next/link';
 import { Vortex } from './ui/vortex.jsx';
 
@@ -48,16 +47,6 @@ const Team_Home = () => {
     
     return () => clearTimeout(timer);
   }, [charIndex, isDeleting, textIndex, typingSpeed, texts]);
-
-  // Animation variants
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 60 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
-  };
 
   return (
     <div className="home-page relative">

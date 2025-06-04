@@ -11,20 +11,20 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+useEffect(() => {
+  const throttled = throttle(() => {
+    const pastThreshold = window.scrollY > 20;
+    if (pastThreshold !== scrolled) {
+      setScrolled(pastThreshold);
+    }
+  }, 50);
 
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  window.addEventListener('scroll', throttled, { passive: true });
+  return () => {
+    window.removeEventListener('scroll', throttled);
+  };
+}, [scrolled]);
+
 
   useEffect(() => {
     const handleClickOutside = (e) => {
